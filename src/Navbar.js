@@ -3,7 +3,6 @@ import React from "react";
 class Navbar extends React.Component {
     constructor(props) {
         super(props);
-		this.state = {show: "all"};
     }
     // Renders component based on current state and props
     render() {
