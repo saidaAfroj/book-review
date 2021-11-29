@@ -48,7 +48,7 @@ class BookDisplayTable extends React.Component {
             <div class="col-rt-12">
                 <div class="Scriptcontent">
               
-                <link href="https://fonts.googleapis.com/css?family=Poppins:700|Raleway" rel="stylesheet"/>
+                
                 {this.renderBookTable()}
            
                 </div>

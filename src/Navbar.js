@@ -9,7 +9,7 @@ class Navbar extends React.Component {
 		return(
           <body class="navbody">
             <nav>
-                <div class ="icon"> Read<b style={{color: 'red'}}>&</b>Soul</div>
+                <div class ="icon"> Book <b style={{color: 'red'}}>Review</b></div>
                 <div class= "search_box">
                      <input type = "search" placeholder="Search Here.."/>
                      <span class= "fa fa-search"></span>

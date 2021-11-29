@@ -1,7 +1,11 @@
 const books = [
     {
         name: 'Book 1',
-        imageName: 'image1', 
+        category: 'Non Fiction',
+        imageName: 'image1',
+        author: 'Author here',
+        ratings: '4.1',
+        summary: 'Summary is here.',
     },
     {
         name: 'Book 2',
