@@ -50,7 +50,7 @@ class EachComment extends React.Component {
         <li class="cmmnt">
             <div class="avatar">
             <a href="javascript:void(0);">
-                <img src={this.avatarSelect(this.getAvatarId(this.props.comment.name))} width="55" height="55" alt="DarkCubes photo avatar"/>
+                <img src={this.avatarSelect(this.getAvatarId(this.props.comment.name))} width="55" height="55" alt="User image not available"/>
             </a></div>
             <div class="cmmnt-content">
                 <header>

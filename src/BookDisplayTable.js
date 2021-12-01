@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from 'react-dom';
-import Images from "./img/index";
+import ImageSelect from "./img/imageSelect";
 
 class BookDisplayTable extends React.Component {
     constructor(props) {
@@ -64,30 +64,22 @@ class PerBookDisplay extends React.Component {
         super(props);
     }
     
-    imageSelect = imageName => {
-      if (imageName === null) {
-        return Images.logos.other;
-      }
-      const imageArray = {
-        'image1': Images.image1,
-        'image2': Images.image2,
-        'image3': Images.image3,
-        'image4': Images.image4,
-        'image5': Images.image5,
-        'image6': Images.image6,
-      };
-      return imageArray[imageName];
-    };
+    showInfo(givenBook){
+        return(
+        <div class="overlay"><div class="text">
+            <h2>{givenBook.name}</h2>
+            <h3>Author: {givenBook.author}</h3>
+            <h3>Rating: {givenBook.ratings}</h3>
+        </div></div>);
+    }
     
     render() {
         return(
         <div class="column" onClick={() => this.props.pageHandler('detail', this.props.book)}>
         <a href="#">
           <div class="container">
-            <img src={this.imageSelect(this.props.book.imageName)} class="image"/>
-            <div class="overlay">
-              <div class="text">{this.props.book.name}</div>
-            </div>
+            <img src={ImageSelect(this.props.book.imageName)} width="380" height="480" alt="Book cover not available" />
+            {this.showInfo(this.props.book)}
           </div>
         </a>
       </div>

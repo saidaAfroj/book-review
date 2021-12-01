@@ -62,20 +62,20 @@ nav .search_box input{
     font-size: 20px;
     width:350px;
 }
-nav .search_box span{
+nav .search_box button{
     color:#0a5071;
     font-size:20px;
     background:#fff;
-    height:53%;
-    padding: 8px;
+    height:100%;
+    padding: 6px;
     position:relative;
     cursor:pointer;
     z-index:1;
 }
-nav .search_box span:hover {
-    color:#fff;
+nav .search_box button:hover {
+    background:#bbb;
 }
-nav .search_box span::after{
+nav .search_box button::after{
     height:100%;
     width:0%;
     content: '';
@@ -86,7 +86,7 @@ nav .search_box span::after{
     z-index:-1;
     transition :0.3s;
 }
-nav .search_box span :hover ::after{
+nav .search_box button :hover ::after{
     width:100%;
 }
 nav .bar {

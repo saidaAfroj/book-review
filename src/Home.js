@@ -15,6 +15,8 @@ class Home extends React.Component {
             this.setState({page: 'showbooks', category: info});
         } else if(page == 'detail'){
             this.setState({page: 'detail', book: info});
+        } else if(page == 'start'){
+            this.setState({page: 'start'});
         }
     }
     

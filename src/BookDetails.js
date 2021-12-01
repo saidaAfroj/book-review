@@ -1,5 +1,5 @@
 import React from "react";
-import Images from "./img/index";
+import ImageSelect from "./img/imageSelect";
 import Comments from "./assets/comments";
 import EachComment from './EachComment';
 import AddComment from './AddComment';
@@ -9,7 +9,7 @@ class BookDetails extends React.Component {
         super(props);
         
         this.state = {comments: Comments.sort(function(a, b) {
-                        return a.daysAgo - b.daysAgo;
+                        return b.daysAgo - a.daysAgo;
                      })};
         
         this.addComment = this.addComment.bind(this);
@@ -23,7 +23,7 @@ class BookDetails extends React.Component {
                 daysAgo: 0,
                 comment: comment
             }].sort(function(a, b) {
-                        return a.daysAgo - b.daysAgo;
+                        return b.daysAgo - a.daysAgo;
                      })
         }));
     }
@@ -52,24 +52,7 @@ class BookDetails extends React.Component {
             <ul id="comments">
                 {fetchedComments}
             </ul></div></div>);
-    }
-    
-    imageSelect = imageName => {
-      if (imageName === null) {
-        return Images.logos.other;
-      }
-      const imageArray = {
-        'image1': Images.image1,
-        'image2': Images.image2,
-        'image3': Images.image3,
-        'image4': Images.image4,
-        'image5': Images.image5,
-        'image6': Images.image6,
-      };
-      return imageArray[imageName];
-    };
-    
-    
+    }    
     
     render() {
         
@@ -79,7 +62,7 @@ class BookDetails extends React.Component {
         <div class="book_detail_container">
         <div class="book_container_child"> </div>
         <div class="book_container_child">
-            <center><img src={this.imageSelect(this.props.book.imageName)} alt="" width="300" height="300" id="book1"/></center>
+            <center><img src={ImageSelect(this.props.book.imageName)} alt="" width="285" height="360" id="book1"/></center>
         </div>
         {this.showBookInfo()}
         <div class="book_container_child"> </div>

@@ -13,11 +13,7 @@ class AddComment extends React.Component {
     }
     
     handleSubmit(event) {
-        //alert('A name was submitted: ' + this.state.value);
-        
-        
         event.preventDefault();
-        // () => this.props.pageHandler('showbooks', 'Fiction')
         this.props.handler(this.state.value, 'Guest');
         this.setState({value: ''});
     }
