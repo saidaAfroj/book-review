@@ -12,9 +12,13 @@ class Showbooks extends React.Component {
         if(category_array.includes(givenCategory)) {
             
             return "Top rated " + givenCategory + " Books";
+        } else if (givenCategory == 'userSugg') {
+            return "Suggested books for " + this.props.userInfo.name ;
+        } else if (givenCategory == 'Trending') {
+            return "Books that are Trending now" ;
         }
         
-        return  "Title/Author matching with keyword '" + givenCategory + "'";
+        return  "Relevant results from searching '" + givenCategory + "'";
     }
     
     fetchBooks(givenCategory) {
@@ -28,10 +32,20 @@ class Showbooks extends React.Component {
                     returnBooks.push(Books[i]);
                 }
             }
+        } else if(givenCategory == 'userSugg') {
+            returnBooks.push(Books[0]);
+            returnBooks.push(Books[5]);
+        } else if (givenCategory == 'Trending') {
+            for(var i=0; i<Books.length; i++){
+                if(Books[i].trending && Books[i].trending.length > 0) {
+                    returnBooks.push(Books[i]);
+                }
+            }
         } else {
             for(var i=0; i<Books.length; i++){
                 if((Books[i].name && Books[i].name.trim().toLowerCase().includes(givenCategory.trim().toLowerCase())) || 
-                    (Books[i].author && Books[i].author.trim().toLowerCase().includes(givenCategory.trim().toLowerCase()))) {
+                    (Books[i].author && Books[i].author.trim().toLowerCase().includes(givenCategory.trim().toLowerCase())) || 
+                    (Books[i].summary && Books[i].summary.trim().toLowerCase().includes(givenCategory.trim().toLowerCase()))) {
                     returnBooks.push(Books[i]);
                 }
             }

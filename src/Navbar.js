@@ -19,6 +19,22 @@ class Navbar extends React.Component {
         
     }
     
+    showFavorite(){
+        if (this.props.userInfo && this.props.userInfo.type && (this.props.userInfo.type == 'user' || this.props.userInfo.type == 'admin')) {
+            return( <li onClick={() => this.props.pageHandler('showbooks', 'userSugg')}><a href="#">{this.props.userInfo.name}'s Suggestion</a></li>);
+        }
+    }
+    
+    showLogin() {
+        
+    if (this.props.userInfo && this.props.userInfo.type && (this.props.userInfo.type == 'user' || this.props.userInfo.type == 'admin') ) {
+        return(<li onClick={() => this.props.pageHandler('logout', '')}><a href ="#">Log Out</a></li>);
+    } else {
+        return(<li onClick={() => this.props.pageHandler('login', '')}><a href ="#">Log In</a></li>);
+    }
+  
+    }
+    
     render() {
 		return(
           <body class="navbody">
@@ -31,13 +47,15 @@ class Navbar extends React.Component {
                      </form>
                 </div>
                 <ol>
+                    { this.showFavorite()}
+                     <li onClick={() => this.props.pageHandler('showbooks', 'Trending')}><a href="#">Trending</a></li>
                      <li onClick={() => this.props.pageHandler('showbooks', 'Sci-fi')}><a href="#">Sci-Fi</a></li>
                      <li onClick={() => this.props.pageHandler('showbooks', 'Thriller')}><a href ="#">Thriller</a></li>
                      <li onClick={() => this.props.pageHandler('showbooks', 'Drama')}><a href ="#">Drama</a></li>
                      <li onClick={() => this.props.pageHandler('showbooks', 'Non Fiction')}><a href ="#">Non Fiction</a></li>
                      <li onClick={() => this.props.pageHandler('showbooks', 'Children')}><a href ="#">Children</a></li>
                      <li onClick={() => this.props.pageHandler('showbooks', 'Other')}><a href ="#">Other</a></li>
-                     <li><a href ="#">Log In</a></li>
+                     {this.showLogin()}
                 </ol>
             </nav>
            </body>

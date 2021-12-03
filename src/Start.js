@@ -1,5 +1,4 @@
 import React from "react";
-import Video from "./book_image3.mp4";
 
 class Start extends React.Component {
     constructor(props) {
@@ -10,10 +9,18 @@ class Start extends React.Component {
     // Renders component based on current state and props
     render() {
 		return(
-        <div>
-          <video autoPlay loop muted>
-            <source src={Video} type="video/mp4"/>
-          </video>
+        <div><div class="book">
+            <span class="page turn"></span>
+            <span class="page turn"></span>
+            <span class="page turn"></span>
+            <span class="page turn"></span>
+            <span class="page turn"></span>
+            <span class="page turn"></span>
+            <span class="cover"></span>
+            <span class="page"></span>
+            <span class="cover turn"></span>
+            
+        </div>
         </div>);
 	}
 	

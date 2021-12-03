@@ -12,10 +12,11 @@ const books = [
         imageName: 'image1',
         author: 'Author here',
         ratings: '4.1',
-        summary: 'Summary is here.',
+        summary: 'S',
     },{
         name: 'Book 2',
-        imageName: 'image2', 
+        imageName: 'image2',
+        trending: 'Yes',
     },{
         name: 'Book 3',
         imageName: 'image3', 

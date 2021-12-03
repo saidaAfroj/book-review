@@ -14,7 +14,12 @@ class AddComment extends React.Component {
     
     handleSubmit(event) {
         event.preventDefault();
-        this.props.handler(this.state.value, 'Guest');
+        var newName = 'Guest';
+        
+        if(this.props.userInfo && this.props.userInfo.name && this.props.userInfo.name.length>0) {
+            newName = this.props.userInfo.name;
+        }
+        this.props.handler(this.state.value, newName);
         this.setState({value: ''});
     }
     render() {
@@ -25,8 +30,8 @@ class AddComment extends React.Component {
           <div class="row">
             <div class="col-6">
             <form onSubmit={this.handleSubmit}>
-            <textarea type="text" class="input" placeholder="Write a comment" value={this.state.value} onChange={this.handleChange} ></textarea>
-              <button class='primaryContained float-right' type="submit">Add Comment</button>
+            <textarea type="text" class="input" placeholder="Write a review" value={this.state.value} onChange={this.handleChange} ></textarea>
+              <button class='primaryContained float-right' type="submit">Add Review</button>
             </form></div>
           </div>
         </div>

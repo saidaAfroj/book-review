@@ -8,11 +8,30 @@ class BookDetails extends React.Component {
     constructor(props) {
         super(props);
         
-        this.state = {comments: Comments.sort(function(a, b) {
-                        return b.daysAgo - a.daysAgo;
-                     })};
-        
         this.addComment = this.addComment.bind(this);
+        this.state = {comments: this.getInitialComments()};
+    }
+    
+    getSeed() {
+        return 3005;
+    }
+    
+    getInitialComments(){
+        const returnedComments = [];
+        var seed = this.getSeed();
+        var daySeed = seed;
+        for(var i=0; i<Comments.length; i+=3) {
+            var now = seed%3;
+            seed = Math.floor(seed/3);
+            
+            if(now <3 && i+now <Comments.length ){
+                returnedComments.push(Comments[i+now]);
+            }                
+        }
+        
+        return returnedComments.sort(function(a, b) {
+                    return b.daysAgo - a.daysAgo;
+                });
     }
     
     addComment(comment, name){
@@ -28,13 +47,26 @@ class BookDetails extends React.Component {
         }));
     }
     
+    getRatings(){
+        if(this.props.book.ratings) return (<h3>Rating: {this.props.book.ratings}</h3>);
+        
+        
+        return (<h3>Rating: {(20 + Math.floor(Math.random() * 30))/10.0}</h3>);
+    }
+    getSummary(){
+        if(this.props.book.summary && this.props.book.summary.length > 5) return (<h4>Summary: {this.props.book.summary}</h4>);
+        
+        
+        return;
+    }
+    
     showBookInfo() {
         return(
         <div class="book_container_child">
             <h2>Author: {this.props.book.author}</h2>
             <h3>Category: {this.props.book.category}</h3>
-            <h3>Rating: {this.props.book.ratings}</h3>
-            <h4>Summary: {this.props.book.summary}</h4>
+            {this.getRatings()}
+            {this.getSummary()}
         </div>);
         
     }
@@ -68,7 +100,7 @@ class BookDetails extends React.Component {
         <div class="book_container_child"> </div>
         </div>
         {this.showComments()}
-        <AddComment handler={this.addComment}/>
+        <AddComment handler={this.addComment} userInfo={this.props.userInfo}/>
     </div>);
 	}
 	
