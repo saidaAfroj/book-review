@@ -12,15 +12,24 @@ class BookDetails extends React.Component {
         this.state = {comments: this.getInitialComments()};
     }
     
+    getNumFromString (str) {
+        var sum = 0;
+        for(var i=0; i<str.length;i++)
+        {
+            sum += str.charCodeAt(i);
+        }
+        return sum;
+    }
+    
     getSeed() {
-        return 3005;
+        return this.getNumFromString(this.props.book.summary) + this.getNumFromString(this.props.book.name);
     }
     
     getInitialComments(){
         const returnedComments = [];
         var seed = this.getSeed();
         var daySeed = seed;
-        for(var i=0; i<Comments.length; i+=3) {
+        for(var i=0; seed >0 && i<Comments.length; i+=3) {
             var now = seed%3;
             seed = Math.floor(seed/3);
             

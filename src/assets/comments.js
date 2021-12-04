@@ -66,17 +66,17 @@ const comments = [
     },
     {
         name: 'Boris Salinas',
-        daysAgo: 19,
+        daysAgo: 193,
         comment: ' This novel is a magical story that reveals the essence of life, love and loneliness. Due to the simplicity of the prose style, breezy and funny illustrations, vividness of imagination this simple yet insightful story is considered to be one of the greatest literary works of all times.'
     },
     {
         name: 'Aqib Norton',
-        daysAgo: 18,
+        daysAgo: 180,
         comment: 'This book is a tale of a young prince who has left his tiny planet and wanted to find the answers for questions that disturbed him and at the same time it discloses the story of a man who has gained knowledge of life nature from a pure child whose voyages and virtuousness have inspired him and brought wisdom. The whole book is permeated with love, fulfillment of expectations and maintenance of those relationships.'
     },
     {
         name: 'Aqib Norton',
-        daysAgo: 17,
+        daysAgo: 175,
         comment: 'One of the most striking features of the book is the uncompromising approach of its author. She constantly rejects all halftones and any attempts to evade from responsibility. Everything becomes very clear and straightforward: there is a way to creativity and if someone refuses to choose it, he betrays creativity and himself. This position requires taking a very big responsibility and only few people can bear it.'
     },
     {
@@ -92,67 +92,42 @@ const comments = [
     {
         name: 'Matteo Donovan',
         daysAgo: 14,
-        comment: ''
+        comment: 'The suspense keeps the pages flying, but what sets this one apart is the palpable sense of onrushing doom.'
     },
     {
         name: 'Jeremiah Mcgill',
-        daysAgo: 12,
-        comment: 'Highly recommended.'
+        daysAgo: 120,
+        comment: 'Readers will be delighted. Most everyone can benefit from this book, especially those in the workplace. In addition, parents, educators, and students will find these insights valuable.'
     },
     {
         name: 'Russell Huffman',
         daysAgo: 11,
-        comment: 'Highly recommended.'
+        comment: 'My boyfriend highly suggested we read this book together and discuss and I\'m glad he did! The author makes a lot of great points that can be applied to friendships, relationships, and business acquaintances. It starts out as a fun read because you\'ll spend a portion of the book saying, who am I? Then you\'ll pick our characteristics from a certain color that fit your personality & try to explain why you do the things you do.'
     },
     {
         name: 'Priscilla Mullen',
         daysAgo: 10,
-        comment: 'Highly recommended.'
+        comment: 'This book is a great value! If you can afford it and don’t have the hard cover books, I suggest you invest in them because they are so beautiful! I grabbed this because my husband wanted to re-read this and I have the hardcovers at my parents house (across the country) so I figure I can pass this along to a local school when I’m done!'
     },
     {
         name: 'Elouise Peters',
         daysAgo: 9,
-        comment: 'Highly recommended.'
+        comment: 'A powerful and compelling, beautifully written story of an American’s dream for a better America—with a clear account of how to get there.'
     },
     {
         name: 'Coco Reeves',
-        daysAgo: 8,
-        comment: 'Highly recommended.'
+        daysAgo: 18,
+        comment: 'Despite doing all the “right things,” many of us are struggling more than our parents or grandparents did to gain a foothold in the middle class. The digital gadgets in our pockets keep becoming more sophisticated, but our basic ability to distinguish truth from fiction is eroding. We can no longer assume that fundamental functions of American democracy, like the smooth counting of votes on Election Day or the ability of Congress to pass laws, will occur. Some of us have stopped believing in science, while others have simply come to doubt the possibility that brighter days lie ahead. The unprecedented disruption of the COVID-19 pandemic laid our anxieties bare. Unity and consensus seem like fading dreams.'
     },
     {
         name: 'John Smith',
-        daysAgo: 7,
-        comment: 'Highly recommended.'
-    },
-    {
-        name: 'Laila Hunter',
-        daysAgo: 6,
-        comment: 'Highly recommended.'
-    },
-    {
-        name: 'Kiefer Stanley',
-        daysAgo: 5,
-        comment: 'Highly recommended.'
+        daysAgo: 70,
+        comment: 'I think this book would help other children to learn that trying new things can be scary, but sometimes when we try, we can find things that make us happy too. And this book will help others know that mistakes are okay and part of learning.'
     },
     {
         name: 'Kaiya Peck',
         daysAgo: 4,
-        comment: 'Highly recommended.'
-    },
-    {
-        name: 'Maiya Paul',
-        daysAgo: 37,
-        comment: 'Highly recommended.'
-    },
-    {
-        name: 'Javan Graves',
-        daysAgo: 3,
-        comment: 'Highly recommended.'
-    },
-    {
-        name: 'Courteney Schroeder',
-        daysAgo: 2,
-        comment: 'Highly recommended.'
+        comment: 'While I definitely recommend this book to other readers, I would recommend it to older teenagers, mainly because it will resonate better with them. The writing is tame enough that younger teens could also read it, but most of the characters are adults or on the verge of adulthood. Older readers would take the most from it since they can not only relate, but they may also better pick up on and appreciate Cassandra\'s sometimes subtle humor.'
     },
     {
         name: 'Mohammod Hamer',

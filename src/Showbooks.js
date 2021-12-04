@@ -33,8 +33,21 @@ class Showbooks extends React.Component {
                 }
             }
         } else if(givenCategory == 'userSugg') {
-            returnBooks.push(Books[0]);
-            returnBooks.push(Books[5]);
+            if (this.props.userInfo.type == 'user') {
+                returnBooks.push(Books[0]);
+                returnBooks.push(Books[5]);
+                returnBooks.push(Books[10]);
+                returnBooks.push(Books[15]);
+                returnBooks.push(Books[20]);
+                returnBooks.push(Books[25]);
+            } else {
+                returnBooks.push(Books[2]);
+                returnBooks.push(Books[7]);
+                returnBooks.push(Books[12]);
+                returnBooks.push(Books[17]);
+                returnBooks.push(Books[22]);
+                returnBooks.push(Books[27]);
+            }
         } else if (givenCategory == 'Trending') {
             for(var i=0; i<Books.length; i++){
                 if(Books[i].trending && Books[i].trending.length > 0) {
@@ -51,7 +64,9 @@ class Showbooks extends React.Component {
             }
         }
         
-        return  returnBooks;
+        return  returnBooks.sort(function(a, b) {
+                    return b.ratings - a.ratings;
+                });
     }
     
     render() {

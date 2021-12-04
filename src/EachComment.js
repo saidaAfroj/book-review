@@ -42,7 +42,7 @@ class EachComment extends React.Component {
         if (days <14) return "Posted a week ago";
         if (days<30) return "Posted " + Math.floor(days/7) + " weeks ago";
         if (days <60) return "Posted a month ago";
-        return "Posted " + Math.floor(days/30) + "months ago"
+        return "Posted " + Math.floor(days/30) + " months ago"
     }
     
     render() {
