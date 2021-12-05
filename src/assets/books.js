@@ -165,7 +165,7 @@ const books = [
     },{
         name: 'Freakonomics',
         category: 'Non Fiction',
-        imageName: 'Freakonomics',
+        imageName: 'freakonomics',
         author: 'Steven Levitt ',
         ratings: '4.6',
         summary: 'Which is more dangerous, a gun or a swimming pool? Which should be feared more: snakes or french fries? Why do sumo wrestlers cheat? In this groundbreaking book, leading economist Steven Levitt—Professor of Economics at the University of Chicago and winner of the American Economic Association’s John Bates Clark medal for the economist under 40 who has made the greatest contribution to the discipline—reveals that the answers. Joined by acclaimed author and podcast host Stephen J. Dubner, Levitt presents a brilliant—and brilliantly entertaining—account of how incentives of the most hidden sort drive behavior in ways that turn conventional wisdom on its head.',
