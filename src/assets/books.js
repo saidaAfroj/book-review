@@ -70,7 +70,7 @@ const books = [
         imageName: 'teeth',
         author: 'Zoje Stage',
         ratings: '4.1',
-        summary: 'This 2018 novel follows a dysfunctional family with a terror of a daughter (you might call her a bad seed). Hanna is seven years old and has never spoken, but that’s the least of her mother’s worries; you’d probably feel the same if your little girl were trying to kill you.',
+        summary: 'The USA Today bestseller - this 2018 novel follows a dysfunctional family with a terror of a daughter (you might call her a bad seed). Hanna is seven years old and has never spoken, but that’s the least of her mother’s worries; you’d probably feel the same if your little girl were trying to kill you.',
     },{
         name: 'The Kind Worth Killing',
         category: 'Thriller',
